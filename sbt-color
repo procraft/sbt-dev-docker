@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# sbt alias with grc colors
+# grcat need to be installed
+
+sbt $@ | grcat /usr/local/share/grc/sbt.conf

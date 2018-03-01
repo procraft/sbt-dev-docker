@@ -1,0 +1,15 @@
+version: "2"
+services:
+  app:
+    image: procraft/sbt-dev
+    volumes:
+      - "./:/opt/app"
+      - "~/.ivy2:/opt/ivy"
+      - "~/.sbt:/opt/sbt"
+    ports:
+      - "127.0.0.1:9000:9000"
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:10
